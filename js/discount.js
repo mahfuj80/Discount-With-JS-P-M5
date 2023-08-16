@@ -1,19 +1,29 @@
+// First Shoe ProtoType Discount
 document.getElementById('btn-discount').addEventListener('click', function () {
-    // get the price of the shoe
-    const getShoePrice = document.getElementById('shoe-amount');
-    const shoePriceString = getShoePrice.innerText;
-    const shoePrice = parseFloat(shoePriceString);
-    // get the discount percent amount
-    const discountPercentElement = document.getElementById('percent-amount');
-    const discountPercentString = discountPercentElement.innerText;
-    const discountPercent = parseFloat(discountPercentString);
-    // calculate the Price After The discount
-    const finalAmount = (shoePrice - ((discountPercent / 100) * shoePrice)).toFixed(2);
-    // set the Amount to the Shoe final price
-    document.getElementById('shoe1-final-price').innerText = finalAmount;
-    console.log(finalAmount, shoePrice, discountPercent);
-
+    giveMeAmountPercentAmountSetAreaId('shoe-amount', 'percent-amount', 'shoe1-final-price')
 })
 
+// Discount of Second ProtoType
+document.getElementById('btn-coupon').addEventListener('click', function () {
+    // get the Coupon
+    const discountCouponElement = document.getElementById('discount-coupon');
+    const discountCoupon = discountCouponElement.value;
+    discountCouponElement.value = "";
+    if (discountCoupon === '') {
+        return alert('Please Provide Discount Coupon');
+    } else if (discountCoupon === 'DISC40') {
+        // get the shoe amount form webpage
+        const couponShoeAmountElement = document.getElementById('coupon-shoe-amount');
+        const couponShoeAmountString = couponShoeAmountElement.innerText;
+        const couponShoeAmount = parseFloat(couponShoeAmountString);
+        // calculate the  Discount 
+        const finalAmount = (couponShoeAmount - ((40 / 100) * couponShoeAmount)).toFixed(2);
+        // Set the final Amount
+        document.getElementById('coupon-final-price').innerText = finalAmount;
+    } else {
+        return alert('Invalid!!!')
+    }
 
 
+
+})
