@@ -1,15 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Discount With Js</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
-    <h1 class="">Get Your Own <span>Discount😊</span>!!!</h1>
+    <header>
+        <h1 class="text-5xl font-medium text-center p-8">Get Your Own <span class="text-rose-800">Discount😊</span>!!!
+        </h1>
+    </header>
+    <main>
+        <section
+            class="flex flex-col lg:flex-row gap-5 bg-slate-300 mx-auto items-center justify-center w-[90%] mb-16 p-10">
+            <div>
+                <div class="card w-96 bg-base-100 shadow-xl">
+                    <figure class="px-10 pt-10">
+                        <img class="w-[90%] h-56" src="./Images/shoe1.png" alt="Shoes" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h2 class="card-title">Commercial Shoes!</h2>
+                        <h2 class="card-title">Price: $<span>1000</span></h2>
+                        <label class="card-title text-center" for="discount-amount">Discount 30%<button
+                                class="btn btn-primary">Here</button></label>
+                        <p>If a dog chews shoes whose shoes does he choose?</p>
+                        <h2 class="card-title">Final Price: $<span>000</span></h2>
+                        <div class="card-actions">
+                            <button class="btn btn-secondary">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="card w-96 bg-base-100 shadow-xl">
+                    <figure class="px-10 pt-10">
+                        <img class="w-[90%] h-56" src="./Images/shoe2.png" alt="Shoes" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h2 class="card-title">Nike ✔Shoes!</h2>
+                        <h2 class="card-title">Price: $<span>1000</span></h2>
+                        <label class="card-title text-center" for="discount-coupon">Coupon: <input
+                                class="border-black w-2/4 border-2" type="text" name="" id="discount-coupon"> <button
+                                class="btn btn-primary">Apply</button></label>
+                        <p>If a dog chews shoes whose shoes does he choose?</p>
+                        <h2 class="card-title">Final Price: $<span>000</span></h2>
+                        <div class="card-actions">
+                            <button class="btn btn-secondary">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
 
 </html>
